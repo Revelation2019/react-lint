@@ -1,0 +1,27 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}/public/index.html",
+      "outFiles": [
+        "${workspaceFolder}/**/*.js"
+      ]
+    },
+    // 下面这项debug调试配置仅用于chrome浏览器，需要在vscode中安装Debugger for Chrome插件，
+    // 然后就可以在代码中打断点进行debug调试。
+    {
+      "type": "chrome",
+      "request": "launch", //launch / attach 两种方式；这里使用launch
+      "name": "Launch Chrome against localhost",//设置名字
+      "url": "http://localhost:3000",//项目地址
+      "webRoot": "${workspaceFolder}/icec-cloud-inquiry-mall-react/"
+      //这一块设置时要注意！webRoot指定网络服务器根目录的工作区绝对路径。
+  }
+  ]
+}
